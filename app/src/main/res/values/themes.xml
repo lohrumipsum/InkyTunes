@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    ==================================================================
+    E-INK THEME
+    This theme enforces a black-and-white color scheme and disables
+    all animations for e-ink screen compatibility.
+    NOTE: The parent theme is now DayNight.NoActionBar to remove the title bar.
+    ==================================================================
+    -->
+    <style name="Theme.InkyTunes.EInk" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/eink_white</item>
+        <item name="colorPrimaryVariant">@color/eink_black</item>
+        <item name="colorOnPrimary">@color/eink_black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/eink_black</item>
+        <item name="colorSecondaryVariant">@color/eink_black</item>
+        <item name="colorOnSecondary">@color/eink_white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Background and Text Colors -->
+        <item name="android:windowBackground">@color/eink_white</item>
+        <item name="android:textColor">@color/eink_black</item>
+
+        <!-- Tab Text Color -->
+        <item name="tabTextColor">@color/eink_black</item>
+        <item name="tabSelectedTextColor">@color/eink_black</item>
+
+        <!-- Disable All Animations -->
+        <item name="android:windowAnimationStyle">@style/NoAnimation</item>
+    </style>
+
+    <!-- Animation Style to nullify all transitions -->
+    <style name="NoAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+    </style>
+</resources>
+
